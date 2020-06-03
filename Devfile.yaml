@@ -38,13 +38,13 @@ apiVersion: 1.0.0
 commands:
   - name: Package the application
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/kafka-quickstart'
+      - workdir: '${CHE_PROJECTS_ROOT}/demo-prep'
         type: exec
         command: mvn package
         component: maven
   - name: Start Quarkus in devmode (hot deploy + debug)
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/kafka-quickstart'
+      - workdir: '${CHE_PROJECTS_ROOT}/demo-prep'
         type: exec
         command: 'mvn compile quarkus:dev'
         component: maven
